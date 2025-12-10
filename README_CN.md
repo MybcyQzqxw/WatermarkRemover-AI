@@ -105,6 +105,32 @@ python remwm.py video.mp4 ./output --detection-skip=3 --fade-in=0.5 --fade-out=0
 python remwm.py input.png --preview
 ```
 
+### 批量处理脚本
+
+使用 `batch_remove_watermark.py` 脚本批量去除文件夹中所有图片的水印：
+
+```powershell
+# Windows 使用便携式 Python 环境
+.\python\python.exe batch_remove_watermark.py .\pictures .\output
+
+# 带参数使用
+.\python\python.exe batch_remove_watermark.py .\pictures .\output --overwrite --max-bbox-percent=15
+```
+
+```bash
+# Linux / macOS
+python batch_remove_watermark.py ./pictures ./output
+```
+
+**批量处理参数：**
+
+| 参数 | 说明 |
+|------|------|
+| `--max-bbox-percent` | 检测框最大占图片比例（默认：10%） |
+| `--detection-prompt` | 水印检测提示词（默认："watermark"） |
+| `--overwrite` | 覆盖已存在的输出文件 |
+| `--extensions` | 处理的图片格式（默认：jpg,jpeg,png,webp） |
+
 ### 命令行参数说明
 
 | 参数 | 说明 |
