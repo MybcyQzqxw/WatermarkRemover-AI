@@ -15,6 +15,10 @@ Batch Watermark Removal Script
 import sys
 import os
 from pathlib import Path
+
+# 确保当前目录在 Python 路径中
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+
 import click
 import torch
 import numpy as np
