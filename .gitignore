@@ -53,3 +53,9 @@ Thumbs.db
 *.safetensors
 .cache/
 huggingface/
+
+# Input/Output folders (keep folders but ignore contents)
+pictures/*
+!pictures/.gitkeep
+output/*
+!output/.gitkeep
